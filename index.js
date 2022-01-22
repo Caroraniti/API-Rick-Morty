@@ -10,15 +10,17 @@ const obtenerUsuarios = () =>{
 
 //botones prev y next
 
-const printPagination = (info) => {
 
-    let preDisable = info.prev == null ? 'disabled' : '';
-    let nextDisable = info.next == null ? 'disabled' : '';
+
+// const printPagination = (info) => {
+
+//     let preDisable = info.prev == null ? 'disabled' : '';
+//     let nextDisable = info.next == null ? 'disabled' : '';
   
-    let html = `<li class="page-item ${preDisable} "><a class= "page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
-    html += `<li class="page-item ${nextDisable} "><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
-    document.getElementById('pagination').innerHTML = html;
-  }
+//     let html = `<li class="page-item ${preDisable} "><a class= "page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
+//     html += `<li class="page-item ${nextDisable} "><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
+//     document.getElementById('pagination').innerHTML = html;
+//   }
 
 
     
