@@ -10,17 +10,6 @@ const obtenerUsuarios = () =>{
 
 
 
-// const printPagination = (info) => {
-
-//     let preDisable = info.prev == null ? 'disabled' : '';
-//     let nextDisable = info.next == null ? 'disabled' : '';
-  
-//     let html = `<li class="page-item ${preDisable} "><a class= "page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
-//     html += `<li class="page-item ${nextDisable} "><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
-//     document.getElementById('pagination').innerHTML = html;
-//   }
-
-
     
 const tarjeta = (info)=>{
     const contenedor = document.querySelector(".contenedor")
