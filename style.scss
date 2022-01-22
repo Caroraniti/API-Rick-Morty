@@ -37,9 +37,11 @@ body {
 .tarjeta {
         background-color: $color-tarjeta;
         width: auto;
+        height: 200px;
         margin-top: 3px;
         margin: 10px;
         margin-bottom: 1,5rem;
+        border: 1px solid black;
         border-radius: 15px;
         color: black;
         font-size: $fuente-tarjeta;
@@ -50,11 +52,13 @@ body {
 
 .tarjeta-nombre {
     margin-bottom: $margen-boton;
+    margin: 2px;
 }
 
 .img-principal {
     width: 40%;
     margin-bottom:20px;
+    align-items: center;
 }
 
 .contenedor-imagen-detalle {
@@ -106,3 +110,4 @@ h2{
     padding: 15px 35px;
     font-size:1.5rem;
 }
+

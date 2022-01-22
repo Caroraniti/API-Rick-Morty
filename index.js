@@ -8,7 +8,35 @@ const obtenerUsuarios = () =>{
     })
 }    
 
+//botones prev y next
+const contenedor = document.querySelector(".contenedor")
+const prev = document.querySelector("#prev")
+const next = document.querySelector("#next")
 
+let paginaActual = 1
+
+next.onclick = () => {
+    paginaActual = paginaActual + 1
+
+    fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}`)
+    .then((res) => res.json())
+    .then((data) => {
+        contenedor(data.results)
+    })
+}
+
+
+
+
+prev.onclick = () => {
+    paginaActual = paginaActual - 1
+
+    fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}`)
+    .then((res) => res.json())
+    .then((data) => {
+        contenedor(data.results)
+    })
+}
 
     
 const tarjeta = (info)=>{
@@ -86,6 +114,5 @@ const volverListadoUsuario = ()=>{
 obtenerUsuarios()
 clickTarjeta()
 mostrarTarjetaDetalles()
-
 
 
