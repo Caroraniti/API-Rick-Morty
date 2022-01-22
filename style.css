@@ -25,4 +25,59 @@ body {
   margin-bottom: 5px;
 }
 
+.img-principal {
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.contenedor-imagen-detalle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-detalles {
+  width: 70%;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.contenedor-detalles {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  font-size: 1, 5rem;
+}
+
+.titulo-detalles-nombre .tarjeta-nombre {
+  font-size: 2.5em;
+}
+
+.titulo-detalles-nombre {
+  padding: 0px 35px 0px 35px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 200;
+}
+
+.boton-atras {
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  padding: 15px 35px;
+  font-size: 1.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
