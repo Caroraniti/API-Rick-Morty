@@ -18,7 +18,7 @@ let paginaActual = 1
 next.onclick = () => {
     paginaActual = paginaActual + 1
 
-    fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}`)
+    fetch(`https://rickandmortyapi.com/api/character?${paginaActual}`)
     .then((res) => res.json())
     .then((data) => {
         contenedor(data.results)

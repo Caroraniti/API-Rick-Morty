@@ -2,15 +2,6 @@ body {
   background-color: #948c8c;
 }
 
-#pagination {
-  text-align: center;
-  border-radius: 3px;
-  margin-top: 2px;
-  margin: 3px;
-  color: black;
-  font-family: "Tahoma";
-}
-
 #titulo {
   color: #060692;
   font-family: "Tahoma";
@@ -84,23 +75,12 @@ body {
   padding: 0px 35px 0px 35px;
 }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-weight: 200;
-}
-
 .boton-atras {
   background-color: white;
   margin-bottom: 15px;
   border-radius: 25px;
   padding: 15px 35px;
   font-size: 1.5rem;
-}
-
-#row {
-  width: 100px;
-  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

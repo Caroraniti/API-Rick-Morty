@@ -12,14 +12,20 @@ body {
         
     }
 
+
 #pagination {
-    text-align: center;
-    border-radius: 3px;
-    margin-top: 2px;
-    margin: 3px;
-    color: black;
-    font-family: $tipografia-principal;
+    
 }
+
+// #pagination {
+//     text-align: center;
+//     border-radius: 3px;
+//     margin-top: 2px;
+//     margin: 3px;
+//     color: black;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: 10px;
+// }
     
 #titulo {
         color: $titulo;
@@ -95,14 +101,14 @@ body {
 .titulo-detalles-nombre .tarjeta-nombre {
     font-size: 2.5em;
 }
+
+
 .titulo-detalles-nombre{
     padding: 0px 35px 0px 35px;
 }
-h2{
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 200;
-}
+
+
+
 .boton-atras{
     background-color: white;
     margin-bottom: 15px;
