@@ -7,11 +7,22 @@ body {
   font-family: "Tahoma";
 }
 
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .tarjeta {
-  background-color: white;
-  width: 100px;
-  height: 100px;
-  font-family: "Tahoma";
+  width: auto;
+  margin-bottom: 1, 5rem;
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+.tarjeta-nombre {
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

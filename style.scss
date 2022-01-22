@@ -2,23 +2,41 @@ $color-fondo: rgb(148, 140, 140);
 $tipografia-principal: "Tahoma";
 $titulo: rgb(6, 6, 146);
 $color-tarjeta: rgb(255, 255, 255);
-
+$tamaño-fuente-titulo: 50px;
+$fuente-tarjeta: 15px;
+$margen-boton: 5px;
+// $borde: 5px solid black;
 
 
 body {
-    background-color: $color-fondo;
+        background-color: $color-fondo;
+        
+    }
     
-}
-
 #titulo {
-    color: $titulo;
-    font-family: $tipografia-principal;
+        color: $titulo;
+        font-family: $tipografia-principal;
+    
+    }
 
-}
-
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}    
+    
 .tarjeta {
-    background-color: $color-tarjeta;
-    width: 100px;
-    height: 100px;
-    font-family: $tipografia-principal;
+        // background-color: $color-tarjeta;
+        width: auto;
+        margin-bottom: 1,5rem;
+        border-radius: 15px;
+        color: white;
+        font-size: $fuente-tarjeta;
+        text-align: center;
+        
+
+    }
+
+.tarjeta-nombre {
+    margin-bottom: $margen-boton;
 }
+
