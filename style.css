@@ -1,0 +1,20 @@
+body {
+  background-color: #bbb7b7;
+  font-family: "Roboto", sans-serif;
+}
+
+infoCharters {
+  margin-top: 140px;
+  margin-bottom: 60px;
+}
+
+.title {
+  color: #e61313;
+  margin: 50px 100px 50px 100px;
+}
+
+.buscador {
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

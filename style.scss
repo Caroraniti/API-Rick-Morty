@@ -1,0 +1,29 @@
+$color-fondo: rgb(187, 183, 183);
+$titulo: rgb(230, 19, 19);
+$margen-principal: 50px 100px 50px 100px;
+$padding-header: 10px 30px 10px 30px;
+$margen-buscador: 50px 100px 50px 100px;
+$borde-buscador: 3px;
+
+
+
+
+body {
+    background-color: $color-fondo;
+    font-family: "Roboto", sans-serif;
+  }
+
+
+.infoCharters {
+    margin-top: 140px;
+    margin-bottom: 60px;
+}
+
+.title {
+    color: $titulo;
+    margin: $margen-principal;
+}
+
+.buscador {
+    border-radius: $borde-buscador;
+}
