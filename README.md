@@ -21,7 +21,7 @@ y volver a la pagina principal.
 
 Para ver el trabajo terminado pueden ingresar desde el siguiente link: 
 
-https://github.com/Caroraniti/API-Rick-Morty
+https://caroraniti.github.io/API-Rick-Morty/
 
 
 Fue un trabajo que decidi hacerlo sola, ya que necesitaba ponerme a prueba sobre los conocimientos que me brindaron. Me costo mucho y tuve varios altibajos, pero haber llegado a este resultado
