@@ -1,106 +1,17 @@
 body {
-  background: radial-gradient(circle, black, white);
-}
-#titulo{
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 5rem;
-}
-.contenedor {
-  display: flex;
-  flex-wrap: wrap;
+  background-color: #948c8c;
 }
 
-.tarjeta{
-  width: auto;
-  border: 5px solid black;
-  margin: auto;
-  margin-bottom: 1.5rem;
-  border-radius: 15px;
-  color: white;
-  background-color: black;
-  font-size: 1.7rem;
-  text-align: center;
-}
-.tarjeta-nombre{
-  margin-bottom: 5px;
-}
-.img-principal{
-  width: 40%;
-  margin-bottom: 5px;
-}
-.contenedor-imagen-detalle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img-detalles{
-  width: 70%;
-  margin-top: 15px;
-  margin-bottom: 25px;
-}
-.contenedor-detalles{
-  display: none;
-  flex-direction: column;
-  align-items: center;
+#titulo {
+  color: #060692;
+  font-family: "Tahoma";
 }
 
-.tarjeta-detalles{
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  width: auto;
-  background-color: black;
-  color: white;
-  border-radius: 25px;
-  font-size: 1.5em;
-}
-
-.titulo-detalles-nombre .tarjeta-nombre {
-  font-size: 2.5em;
-}
-.titulo-detalles-nombre{
-  padding: 0px 35px 0px 35px;
-}
-h2{
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-weight: 200;
-}
-.boton-atras{
+.tarjeta {
   background-color: white;
-  margin-bottom: 15px;
-  border-radius: 25px;
-  padding: 15px 35px;
-  font-size:1.5rem;
+  width: 100px;
+  height: 100px;
+  font-family: "Tahoma";
 }
-
-
-
-
-
-
-
-
-
-
-/* body {
-  background-color: #bbb7b7;
-  font-family: "Roboto", sans-serif;
-}
-
-infoCharters {
-  margin-top: 140px;
-  margin-bottom: 60px;
-}
-
-.title {
-  color: #e61313;
-  margin: 50px 100px 50px 100px;
-}
-
-.buscador {
-  border-radius: 3px;
-} */
 
 /*# sourceMappingURL=style.css.map */

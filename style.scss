@@ -1,29 +1,24 @@
-$color-fondo: rgb(187, 183, 183);
-$titulo: rgb(230, 19, 19);
-$margen-principal: 50px 100px 50px 100px;
-$padding-header: 10px 30px 10px 30px;
-$margen-buscador: 50px 100px 50px 100px;
-$borde-buscador: 3px;
-
+$color-fondo: rgb(148, 140, 140);
+$tipografia-principal: "Tahoma";
+$titulo: rgb(6, 6, 146);
+$color-tarjeta: rgb(255, 255, 255);
 
 
 
 body {
     background-color: $color-fondo;
-    font-family: "Roboto", sans-serif;
-  }
-
-
-.infoCharters {
-    margin-top: 140px;
-    margin-bottom: 60px;
+    
 }
 
-.title {
+#titulo {
     color: $titulo;
-    margin: $margen-principal;
+    font-family: $tipografia-principal;
+
 }
 
-.buscador {
-    border-radius: $borde-buscador;
+.tarjeta {
+    background-color: $color-tarjeta;
+    width: 100px;
+    height: 100px;
+    font-family: $tipografia-principal;
 }

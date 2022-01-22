@@ -8,8 +8,6 @@ const obtenerUsuarios = () =>{
     })
 }    
 
-//botones prev y next
-
 
 
 // const printPagination = (info) => {
