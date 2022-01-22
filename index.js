@@ -1,45 +1,102 @@
-const API = 'https://rickandmortyapi.com/api/character/';
-
-const getData = (apiURL) => {
-  return fetch(apiURL)
-    .then(response => response.json())
-    .then(json => {
-      printData(json),
-        printPagination(json.info)
+const obtenerUsuarios = () =>{
+    fetch(`https://rickandmortyapi.com/api/character`)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        tarjeta(data.results)
+        clickTarjeta(data.results)
     })
-
-  console.log("json -->", json)
-}
-
-
-const printData = (data) => {
-  let html = '';
-  data.results.forEach(c => {
-    html += '<div class="col mt-5">';
-    html += '<div class= "card" style="width: 13rem;">'
-    html += `<img src="${c.image}" class="card-img-top" alt="...">`
-    html += '<div class="card-body">'
-    html += `<h5 class="card-title">${c.name}</h5>`
-    html += `<p class="card-text">Genero: ${c.gender}</p>`
-    html += `<p class="card-text">Especie: ${c.species}</p>`
-    html += '</div>'
-
-    html += '</div>'
-    html += '</div>'
-  });
-  document.getElementById('infoCharecters').innerHTML = html
-}
+}    
 
 //botones prev y next
 
 const printPagination = (info) => {
 
-  let preDisable = info.prev == null ? 'disabled' : '';
-  let nextDisable = info.next == null ? 'disabled' : '';
+    let preDisable = info.prev == null ? 'disabled' : '';
+    let nextDisable = info.next == null ? 'disabled' : '';
+  
+    let html = `<li class="page-item ${preDisable} "><a class= "page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
+    html += `<li class="page-item ${nextDisable} "><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
+    document.getElementById('pagination').innerHTML = html;
+  }
 
-  let html = `<li class="page-item ${preDisable} "><a class= "page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
-  html += `<li class="page-item ${nextDisable} "><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
-  document.getElementById('pagination').innerHTML = html;
+
+    
+const tarjeta = (info)=>{
+    const contenedor = document.querySelector(".contenedor")
+    const html = info.reduce ((acc, elemento) => {
+
+        return acc + 
+        `<div class="tarjeta">
+            <div class="tarjeta-nombre"> ${elemento.name} </div>
+            <img class="img-principal" src= "${elemento.image}" id="${elemento.id}" />
+        </div>
+        `
+    }, "")
+    contenedor.innerHTML = html
 }
 
-getData(API);
+const clickTarjeta = ()=>{
+    const imgBotones = document.querySelectorAll(".img-principal")
+    const contenedor = document.querySelector(".contenedor")
+    const contenedorDetalles = document.querySelector(".contenedor-detalles")
+
+    for (let i = 0; i < imgBotones.length; i++) {
+        imgBotones[i].onclick=()=>{
+            // console.log(imgBotones[i].id);
+            contenedor.style.display = "none"
+            contenedorDetalles.style.display = "flex"
+            const idDelBoton = imgBotones[i].id
+            console.log(idDelBoton);
+            mostrarTarjetaDetalles(idDelBoton)
+        }
+    }
+}
+
+const detalles = (data) =>{
+    const contenedorDetalles = document.querySelector(".contenedor-detalles")
+    const detallesEnHTML =
+    `
+    <div class="tarjeta-detalles">
+        <h1 class="titulo-detalles-nombre">${data.name}</h1>
+        <h2>Status: ${data.status}</h2>
+        <h2>Species: ${data.species}</h2>
+        <h2>Gender: ${data.gender}</h2>
+        <div class="contenedor-imagen-detalle">
+            <img class="img-detalles" src= "${data.image}"/>
+        </div>
+        <button type="button" class="boton-atras" id="${data.id}"> Atrás </button>
+    </div>
+    `
+    contenedorDetalles.innerHTML= detallesEnHTML
+}  
+
+const mostrarTarjetaDetalles = (idDelBoton) => {
+    fetch(`https://rickandmortyapi.com/api/character/${idDelBoton}`)
+    .then((res) =>  res.json())
+    .then((data) => {
+    detalles(data)
+    volverListadoUsuario()
+    })
+}
+
+const volverListadoUsuario = ()=>{
+    const botonAtras = document.querySelector(".boton-atras")
+    botonAtras.onclick =()=>{
+        const contenedor = document.querySelector(".contenedor")
+        const contenedorDetalles = document.querySelector(".contenedor-detalles")
+
+        contenedor.style.display ="flex"
+        contenedorDetalles.style.display="none"
+
+    }  
+    
+    
+}
+
+obtenerUsuarios()
+clickTarjeta()
+mostrarTarjetaDetalles()
+
+
+
