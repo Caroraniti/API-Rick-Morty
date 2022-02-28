@@ -2,12 +2,14 @@ const obtenerUsuarios = () =>{
     fetch(`https://rickandmortyapi.com/api/character`)
     .then(res => res.json())
     .then(data => {
+        // no dejes console log en una entrega
         console.log(data)
         tarjeta(data.results)
         clickTarjeta(data.results)
     })
 }    
 
+// es preferible que estas variables esten definidas arriba de todo
 //botones prev y next
 const contenedor = document.querySelector(".contenedor")
 const prev = document.querySelector("#prev")
@@ -16,11 +18,14 @@ const next = document.querySelector("#next")
 let paginaActual = 1
 
 next.onclick = () => {
+    // preferible escribir paginaActual++
     paginaActual = paginaActual + 1
 
     fetch(`https://rickandmortyapi.com/api/character?${paginaActual}`)
     .then((res) => res.json())
     .then((data) => {
+        // no hay ninguna funcion que se llame contenedor, esto provoca que tu codigo falle. 
+        // quiza querias decir tarjeta(data.results)
         contenedor(data.results)
     })
 }
@@ -29,11 +34,14 @@ next.onclick = () => {
 
 
 prev.onclick = () => {
+    // preferible escribir paginaActual--
     paginaActual = paginaActual - 1
 
     fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}`)
     .then((res) => res.json())
     .then((data) => {
+                // no hay ninguna funcion que se llame contenedor, esto provoca que tu codigo falle. 
+        // quiza querias decir tarjeta(data.results)
         contenedor(data.results)
     })
 }
@@ -59,7 +67,11 @@ const clickTarjeta = ()=>{
     const contenedorDetalles = document.querySelector(".contenedor-detalles")
 
     for (let i = 0; i < imgBotones.length; i++) {
+        // se mas prolija, respeta los espacios: es como en un texto, dejás espacios despues de un punto, 
+        // una coma, antes de un parentesis. Hace lo mismo en JSON
+        // imgBotones[i].onclick= () => {
         imgBotones[i].onclick=()=>{
+            // no dejes codigo comentado en una entrega
             // console.log(imgBotones[i].id);
             contenedor.style.display = "none"
             contenedorDetalles.style.display = "flex"
@@ -92,6 +104,8 @@ const mostrarTarjetaDetalles = (idDelBoton) => {
     fetch(`https://rickandmortyapi.com/api/character/${idDelBoton}`)
     .then((res) =>  res.json())
     .then((data) => {
+        // ojo con el tabulado aca, las funciones deberian llamarse en donde estoy
+        // escribiendo este comentario, no a la misma altura del then
     detalles(data)
     volverListadoUsuario()
     })
