@@ -6,17 +6,18 @@ $tamaño-fuente-titulo: 50px;
 $fuente-tarjeta: 15px;
 $margen-boton: 5px;
 
-
+// esta muuuy desprolijo este sass. el tabulado esta mal, estas dejando saltos de linea de mas...
+// trata de ponerle mas onda la proxima. 
 body {
         background-color: $color-fondo;
         
     }
 
-
+// no dejes selectores vacios
 #pagination {
     
 }
-
+// no dejes codigo comentado en una entrega
 // #pagination {
 //     text-align: center;
 //     border-radius: 3px;
@@ -27,6 +28,7 @@ body {
 //     font-size: 10px;
 // }
     
+// el tabulado esta mal
 #titulo {
         color: $titulo;
         font-family: $tipografia-principal;
@@ -35,6 +37,7 @@ body {
     
     }
 
+    // no estas usando anidado aca y podrias! realmente sirve mucho y es importante que lo practiques
 .contenedor {
     display: flex;
     flex-wrap: wrap;
